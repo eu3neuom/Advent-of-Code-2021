@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCode configurations
+.vscode
+.mypy_cache
+outputPart1.txt
+outputPart2.txt
