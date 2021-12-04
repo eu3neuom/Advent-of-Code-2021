@@ -131,5 +131,6 @@ dmypy.json
 # VSCode configurations
 .vscode
 .mypy_cache
+input.txt
 outputPart1.txt
 outputPart2.txt
