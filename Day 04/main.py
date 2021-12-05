@@ -70,7 +70,7 @@ def solvePart2(extractedNumbers, boards):
 def main():
     extractedNumbers = None
     boards = []
-    with open("Day 04/example.txt", "r") as file:
+    with open("Day 04/input.txt", "r") as file:
         extractedNumbers = [int(x) for x in file.readline().strip().split(",")]
         file.readline()
         data = file.readlines()
