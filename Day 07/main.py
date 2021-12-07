@@ -1,4 +1,5 @@
 # https://adventofcode.com/2021/day/7
+import os
 
 
 def getMinCost(data, formula):
@@ -14,24 +15,24 @@ def getMinCost(data, formula):
 
 def solvePart1(data):
     answer = getMinCost(data, lambda x: int(x))
-    with open("Day 07/outputPart1.txt", "w") as file:
-        file.write(str(answer))
+    print("└─Part 01: ", answer)
 
 
 def solvePart2(data):
     answer = getMinCost(data, lambda x: int(x * (x + 1) / 2))
-    with open("Day 07/outputPart2.txt", "w") as file:
-        file.write(str(answer))
+    print("└─Part 02: ", answer)
 
 
-def main():
-    data = None
-    with open("Day 07/example.txt", "r") as file:
+def solveProblem(filePath):
+    with open(filePath, "r") as file:
         data = [int(num) for num in file.readline().split(",")]
 
-    solvePart1(data)
-    solvePart2(data)
+        print("For " + filePath)
+        solvePart1(data)
+        solvePart2(data)
 
 
 if __name__ == "__main__":
-    main()
+    DAY_PATH = "Day 07"
+    solveProblem(os.path.join(DAY_PATH, "example.txt"))
+    solveProblem(os.path.join(DAY_PATH, "input.txt"))
