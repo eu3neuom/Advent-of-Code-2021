@@ -24,10 +24,8 @@ def solve(line):
 
     matchingCost = 0
     value = {"(": 1, "[": 2, "{": 3, "<": 4}
-    while len(queue) > 0:
-        ch = queue[-1]
+    for ch in reversed(queue):
         matchingCost = matchingCost * 5 + value[ch]
-        queue.pop()
 
     return ChunkType.INCOMPLETE, matchingCost
 
